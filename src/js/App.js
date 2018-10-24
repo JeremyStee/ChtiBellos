@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 //SCSS
 import '../scss/App.scss';
 
 //COMPONENTS
 import Login from '../js/Login';
-import Sorties from '../js/Sorties';
+import Sorties from '../js/Sorties/Sorties';
 
 class App extends Component {
     render() {

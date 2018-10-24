@@ -1,0 +1,60 @@
+#Sorties {
+    & > h1 {
+        text-align: center;
+        margin-top: 1em;
+    }
+    ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        li {
+            flex: 1;
+            flex-basis: 48%;
+            margin: 1%;
+        }
+    }
+    #a0 {
+        background: url('../img/sortiesBackgrounds/img1.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    #a1 {
+        background: url('../img/sortiesBackgrounds/img2.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    #a2 {
+        background: url('../img/sortiesBackgrounds/img3.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    #a3 {
+        background: url('../img/sortiesBackgrounds/img4.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    #a4 {
+        background: url('../img/sortiesBackgrounds/img5.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .sortie {
+        display: flex;
+        height: 100%;
+
+        // box-shadow: 0 37.125px 70px -12.125px rgba(0, 0, 0, 0.3);
+        color: white;
+
+        &:hover {
+            box-shadow: 1px 1px 15px black;
+            cursor: pointer;
+        }
+        .leftSide,
+        .rightSide {
+            flex: 1;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 3%;
+        }
+    }
+}
