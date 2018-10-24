@@ -42,10 +42,8 @@
     .sortie {
         display: flex;
         height: 100%;
-
-        // box-shadow: 0 37.125px 70px -12.125px rgba(0, 0, 0, 0.3);
         color: white;
-
+        text-shadow: 1px 1px black;
         &:hover {
             box-shadow: 1px 1px 15px black;
             cursor: pointer;
@@ -53,10 +51,22 @@
         .leftSide,
         .rightSide {
             flex: 1;
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.4);
         }
         .leftSide {
             padding: 3%;
+
+            h1 {
+                margin-bottom: 0.3em;
+                color: #85c1e9;
+            }
+            h2 {
+                margin-bottom: 0.2em;
+                color: #d6eaf8;
+                span {
+                    color: orange;
+                }
+            }
         }
         .confirmation {
             text-align: right;

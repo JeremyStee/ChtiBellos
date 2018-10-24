@@ -80,7 +80,7 @@ var DATA = {
             horairefin: '18h',
             lieu: 'Bailleul',
             description:
-                'Animation du marché de Bailleul sous chapiteau chauffé',
+                'On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page ell',
             confirmation: true,
             imgbackground: 'a4',
             presences: {
