@@ -9,7 +9,8 @@ var DATA = {
             lieu: 'St Jans Cappel',
             description:
                 "Animation de la course de St Jans, animation du départ et de l'arrivée",
-            confirmation: false,
+            confirmation: true,
+            imgbackground: 'a0',
             presences: {
                 presents: [],
                 peutetre: [],
@@ -27,6 +28,7 @@ var DATA = {
             description:
                 'Animation du marché de Bailleul sous chapiteau chauffé',
             confirmation: false,
+            imgbackground: 'a1',
             presences: {
                 presents: [],
                 peutetre: [],
@@ -44,6 +46,7 @@ var DATA = {
             description:
                 'Animation du marché de Bailleul sous chapiteau chauffé',
             confirmation: false,
+            imgbackground: 'a2',
             presences: {
                 presents: [],
                 peutetre: [],
@@ -61,6 +64,7 @@ var DATA = {
             description:
                 'Animation du marché de Bailleul sous chapiteau chauffé',
             confirmation: false,
+            imgbackground: 'a3',
             presences: {
                 presents: [],
                 peutetre: [],
@@ -77,7 +81,8 @@ var DATA = {
             lieu: 'Bailleul',
             description:
                 'Animation du marché de Bailleul sous chapiteau chauffé',
-            confirmation: false,
+            confirmation: true,
+            imgbackground: 'a4',
             presences: {
                 presents: [],
                 peutetre: [],
@@ -95,6 +100,7 @@ var DATA = {
             description:
                 'Animation du marché de Bailleul sous chapiteau chauffé',
             confirmation: false,
+            imgbackground: 'a2',
             presences: {
                 presents: [],
                 peutetre: [],
@@ -112,6 +118,7 @@ var DATA = {
             description:
                 'Animation du marché de Bailleul sous chapiteau chauffé',
             confirmation: false,
+            imgbackground: 'a0',
             presences: {
                 presents: [],
                 peutetre: [],

@@ -4,18 +4,22 @@ import React, { Component } from 'react';
 import '../../scss/Sortie.scss';
 
 class Sortie extends Component {
-    constructor(props) {
-        super(props);
-        var rdm = Math.floor(Math.random() * Math.floor(5));
-
-        this.state = {
-            bgRdm: 'a' + rdm
-        };
-    }
     componentWillMount() {}
+    componentDidMount() {
+        this.checkConfirmation();
+    }
+    checkConfirmation() {
+        if (!this.props.sortie.confirmation) {
+            document.getElementById(this.props.sortie.id).style.display =
+                'none';
+        } else {
+            document.getElementById(this.props.sortie.id).style.display =
+                'block';
+        }
+    }
     render() {
         return (
-            <div id={this.state.bgRdm} className="sortie">
+            <div id={this.props.sortie.imgbackground} className="sortie">
                 <div className="leftSide">
                     <h1>{this.props.sortie.titre}</h1>
                     <h2>{this.props.sortie.date}</h2>
@@ -27,7 +31,9 @@ class Sortie extends Component {
                     <p>{this.props.sortie.description}</p>
                 </div>
                 <div className="rightSide">
-                    <p />
+                    <div id={this.props.sortie.id} className="confirmation">
+                        Confirmée
+                    </div>
                 </div>
             </div>
         );
