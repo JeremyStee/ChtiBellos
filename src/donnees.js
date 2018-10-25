@@ -130,6 +130,8 @@ var DATA = {
     users: [
         {
             id: 0,
+            identifiant: 'JeremyStee',
+            mdp: 'pomme11',
             nom: 'Steenkiste',
             prenom: 'Jérémy',
             tel: '0648708166',

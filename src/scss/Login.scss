@@ -1,5 +1,18 @@
 #Login {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    padding-top: 10em;
+    display: flex;
+    flex-direction: column;
     img {
         width: 200px;
+        margin: auto;
+        margin-bottom: 2em;
+    }
+    input,
+    button {
+        width: 50%;
+        margin: auto;
     }
 }
