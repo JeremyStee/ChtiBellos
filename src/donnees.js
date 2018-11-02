@@ -3,7 +3,7 @@ var DATA = {
         {
             id: 0,
             titre: 'Ronde de St Jans',
-            date: '21 Octobre 2018',
+            date: '25 Octobre 2018',
             horairedebut: '9h30',
             horairefin: '11h30',
             lieu: 'St Jans Cappel',
@@ -21,7 +21,7 @@ var DATA = {
         {
             id: 1,
             titre: 'Marché de Nöel',
-            date: '21 Octobre 2018',
+            date: '24 Octobre 2018',
             horairedebut: '15h',
             horairefin: '18h',
             lieu: 'Bailleul',
@@ -57,7 +57,7 @@ var DATA = {
         {
             id: 3,
             titre: 'Trail des Monts des flandres',
-            date: '21 Octobre 2018',
+            date: '22 Octobre 2018',
             horairedebut: '15h',
             horairefin: '18h',
             lieu: 'Bailleul',
@@ -75,7 +75,7 @@ var DATA = {
         {
             id: 4,
             titre: 'Trail des Monts des flandres',
-            date: '21 Octobre 2018',
+            date: '31 Octobre 2018',
             horairedebut: '15h',
             horairefin: '18h',
             lieu: 'Bailleul',
@@ -93,7 +93,7 @@ var DATA = {
         {
             id: 5,
             titre: 'Trail des Monts des flandres',
-            date: '21 Octobre 2018',
+            date: '14 Octobre 2018',
             horairedebut: '15h',
             horairefin: '18h',
             lieu: 'Bailleul',
@@ -111,7 +111,7 @@ var DATA = {
         {
             id: 6,
             titre: 'Trail des Monts des flandres',
-            date: '21 Octobre 2018',
+            date: '18 Octobre 2018',
             horairedebut: '15h',
             horairefin: '18h',
             lieu: 'Bailleul',

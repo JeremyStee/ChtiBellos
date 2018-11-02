@@ -51,7 +51,7 @@
         .leftSide,
         .rightSide {
             flex: 1;
-            background: rgba(0, 0, 0, 0.4);
+            background: rgba(0, 0, 0, 0.5);
         }
         .leftSide {
             padding: 3%;
@@ -65,6 +65,9 @@
                 color: #d6eaf8;
                 span {
                     color: orange;
+                }
+                &:first-letter {
+                    text-transform: uppercase;
                 }
             }
         }

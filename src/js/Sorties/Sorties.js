@@ -26,6 +26,7 @@ class Sorties extends Component {
         );
 
         ressourceAsArray.forEach((sortie) => {
+            sortie.date = new Date(sortie.date);
             rows.push(
                 <li key={sortie.id}>
                     <Sortie sortie={sortie} id={i} />
@@ -36,7 +37,6 @@ class Sorties extends Component {
         this.setState({ sorties: rows });
     }
     render() {
-        console.log(this.state.sorties);
         return (
             <div id="Sorties">
                 <h1>Prochaines Sorties</h1>
