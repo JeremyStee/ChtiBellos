@@ -16,6 +16,10 @@ class Sorties extends Component {
     componentWillMount() {
         this.DataToObject();
     }
+    sortArrayByDate(a, b) {
+        return a.date > b.date ? 1 : a.date < b.date ? -1 : 0;
+    }
+
     DataToObject() {
         var rows = [];
         var i = 0;
@@ -24,9 +28,12 @@ class Sorties extends Component {
         let ressourceAsArray = Object.keys(JSON.sorties).map(
             (pid) => JSON.sorties[pid]
         );
-
         ressourceAsArray.forEach((sortie) => {
             sortie.date = new Date(sortie.date);
+        });
+        ressourceAsArray.sort(this.sortArrayByDate);
+
+        ressourceAsArray.forEach((sortie) => {
             rows.push(
                 <li key={sortie.id}>
                     <Sortie sortie={sortie} id={i} />

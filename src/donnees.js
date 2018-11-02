@@ -125,6 +125,24 @@ var DATA = {
                 absents: [],
                 nonrepondu: []
             }
+        },
+        {
+            id: 7,
+            titre: 'Trail des Monts des flandres',
+            date: '4 Janvier 2018',
+            horairedebut: '15h',
+            horairefin: '18h',
+            lieu: 'Bailleul',
+            description:
+                'Animation du marché de Bailleul sous chapiteau chauffé',
+            confirmation: false,
+            imgbackground: 'a0',
+            presences: {
+                presents: [],
+                peutetre: [],
+                absents: [],
+                nonrepondu: []
+            }
         }
     ],
     users: [
