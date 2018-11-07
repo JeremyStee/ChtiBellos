@@ -32,7 +32,6 @@ class Sorties extends Component {
             sortie.date = new Date(sortie.date);
         });
         ressourceAsArray.sort(this.sortArrayByDate);
-
         ressourceAsArray.forEach((sortie) => {
             rows.push(
                 <li key={sortie.id}>

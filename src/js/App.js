@@ -7,6 +7,7 @@ import '../scss/App.scss';
 //COMPONENTS
 import Login from '../js/Login';
 import Sorties from '../js/Sorties/Sorties';
+import Ajout from './Ajout';
 
 class App extends Component {
     render() {
@@ -16,6 +17,7 @@ class App extends Component {
                     <div>
                         <Route exact path="/" component={Login} />
                         <Route path="/sorties" component={Sorties} />
+                        <Route path="/ajout" component={Ajout} />
                     </div>
                 </Router>
             </div>

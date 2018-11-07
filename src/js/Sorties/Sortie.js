@@ -23,7 +23,9 @@ class Sortie extends Component {
             weekday: 'long',
             year: 'numeric',
             month: 'long',
-            day: 'numeric'
+            day: 'numeric',
+            hours: 'numeric',
+            minutes: 'numeric'
         };
         return (
             <div id={this.props.sortie.imgbackground} className="sortie">
