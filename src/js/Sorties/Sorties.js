@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 //COMPONENTS
 import Sortie from './Sortie';
@@ -8,7 +9,6 @@ import firebase from '../../firebase.js';
 class Sorties extends Component {
     constructor(props) {
         super(props);
-
         this.state = {
             sortiesRender: []
         };
@@ -56,6 +56,11 @@ class Sorties extends Component {
         return (
             <div id="Sorties">
                 <h1>Prochaines Sorties</h1>
+                <Link to="/ajout">
+                    <button onClick={this.login} className="btn btn-primary">
+                        Ajouter une sortie
+                    </button>
+                </Link>
                 <ul>{this.state.sortiesRender}</ul>
             </div>
         );
