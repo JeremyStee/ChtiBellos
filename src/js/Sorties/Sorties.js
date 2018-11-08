@@ -52,6 +52,12 @@ class Sorties extends Component {
     sortArrayByDate(a, b) {
         return a.date > b.date ? 1 : a.date < b.date ? -1 : 0;
     }
+    componentWillUnmount() {
+        firebase
+            .database()
+            .ref('sorties')
+            .off('value');
+    }
     render() {
         return (
             <div id="Sorties">
