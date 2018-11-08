@@ -3,50 +3,60 @@ import React, { Component } from 'react';
 //COMPONENTS
 import Sortie from './Sortie';
 //JSON
-import JSON from '../../donnees';
+import firebase from '../../firebase.js';
 
 class Sorties extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            sorties: []
+            sortiesRender: []
         };
     }
     componentWillMount() {
-        this.DataToObject();
+        this.getDataFromBase();
+    }
+    getDataFromBase() {
+        firebase
+            .database()
+            .ref('sorties')
+            .on(
+                'value',
+                (snapshot) => {
+                    if (snapshot.val() !== null) {
+                        let rows = [];
+                        let i = 0;
+                        let ressourceAsArray = Object.keys(snapshot.val()).map(
+                            (pid) => snapshot.val()[pid]
+                        );
+                        ressourceAsArray.forEach((sortie) => {
+                            sortie.date = new Date(sortie.date);
+                        });
+                        ressourceAsArray.sort(this.sortArrayByDate);
+                        ressourceAsArray.forEach((sortie) => {
+                            rows.push(
+                                <li key={i}>
+                                    <Sortie sortie={sortie} id={i} />
+                                </li>
+                            );
+                            i++;
+                        });
+                        this.setState({ sortiesRender: rows });
+                    }
+                },
+                (error) => {
+                    console.log('Error : ' + error.code);
+                }
+            );
     }
     sortArrayByDate(a, b) {
         return a.date > b.date ? 1 : a.date < b.date ? -1 : 0;
-    }
-
-    DataToObject() {
-        var rows = [];
-        var i = 0;
-
-        //Conversion du json en propriétés en tableau
-        let ressourceAsArray = Object.keys(JSON.sorties).map(
-            (pid) => JSON.sorties[pid]
-        );
-        ressourceAsArray.forEach((sortie) => {
-            sortie.date = new Date(sortie.date);
-        });
-        ressourceAsArray.sort(this.sortArrayByDate);
-        ressourceAsArray.forEach((sortie) => {
-            rows.push(
-                <li key={sortie.id}>
-                    <Sortie sortie={sortie} id={i} />
-                </li>
-            );
-            i++;
-        });
-        this.setState({ sorties: rows });
     }
     render() {
         return (
             <div id="Sorties">
                 <h1>Prochaines Sorties</h1>
-                <ul>{this.state.sorties}</ul>
+                <ul>{this.state.sortiesRender}</ul>
             </div>
         );
     }

@@ -23,12 +23,20 @@ class Ajout extends Component {
                 titre: this.state.titre,
                 date: this.state.date,
                 debut: this.state.debut,
-                find: this.state.fin,
+                fin: this.state.fin,
                 lieu: this.state.lieu,
                 description: this.state.description
             };
             if (item.titre !== '') {
                 itemsRef.push(item);
+                this.setState({
+                    titre: '',
+                    date: '',
+                    debut: '',
+                    fin: '',
+                    lieu: '',
+                    description: ''
+                });
             }
         } catch (error) {
             console.log("Erreur lors de l'ajout en base");
@@ -50,7 +58,6 @@ class Ajout extends Component {
                                 className="form-control"
                                 id="titre"
                                 name="titre"
-                                placeholder="Ronde de St Jans"
                                 onChange={(e) =>
                                     this.setState({ titre: e.target.value })
                                 }
@@ -68,7 +75,6 @@ class Ajout extends Component {
                                 className="form-control"
                                 id="date"
                                 name="date"
-                                placeholder="25 Octobre 2018"
                                 onChange={(e) =>
                                     this.setState({ date: e.target.value })
                                 }
@@ -86,7 +92,6 @@ class Ajout extends Component {
                                 className="form-control"
                                 id="debut"
                                 name="debut"
-                                placeholder="11h"
                                 onChange={(e) =>
                                     this.setState({ debut: e.target.value })
                                 }
@@ -102,7 +107,6 @@ class Ajout extends Component {
                                 className="form-control"
                                 id="fin"
                                 name="fin"
-                                placeholder="17h"
                                 onChange={(e) =>
                                     this.setState({ fin: e.target.value })
                                 }
@@ -120,7 +124,6 @@ class Ajout extends Component {
                                 className="form-control"
                                 id="lieu"
                                 name="lieu"
-                                placeholder="St Jans Cappel"
                                 onChange={(e) =>
                                     this.setState({ lieu: e.target.value })
                                 }
@@ -138,7 +141,6 @@ class Ajout extends Component {
                                 className="form-control"
                                 id="description"
                                 name="description"
-                                placeholder="Animation de la course"
                                 onChange={(e) =>
                                     this.setState({
                                         description: e.target.value
