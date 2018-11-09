@@ -22,36 +22,40 @@
             margin: 1%;
         }
     }
-    #a0 {
-        background: url('../img/sortiesBackgrounds/img1.jpg');
-        background-size: cover;
-        background-position: center;
-    }
-    #a1 {
-        background: url('../img/sortiesBackgrounds/img2.jpg');
-        background-size: cover;
-        background-position: center;
-    }
-    #a2 {
-        background: url('../img/sortiesBackgrounds/img3.jpg');
-        background-size: cover;
-        background-position: center;
-    }
-    #a3 {
-        background: url('../img/sortiesBackgrounds/img4.jpg');
-        background-size: cover;
-        background-position: center;
-    }
-    #a4 {
-        background: url('../img/sortiesBackgrounds/img5.jpg');
-        background-size: cover;
-        background-position: center;
-    }
+    // #a0 {
+    //     background: url('../img/sortiesBackgrounds/img1.jpg');
+    //     background-size: cover;
+    //     background-position: center;
+    // }
+    // #a1 {
+    //     background: url('../img/sortiesBackgrounds/img2.jpg');
+    //     background-size: cover;
+    //     background-position: center;
+    // }
+    // #a2 {
+    //     background: url('../img/sortiesBackgrounds/img3.jpg');
+    //     background-size: cover;
+    //     background-position: center;
+    // }
+    // #a3 {
+    //     background: url('../img/sortiesBackgrounds/img4.jpg');
+    //     background-size: cover;
+    //     background-position: center;
+    // }
+    // #a4 {
+    //     background: url('../img/sortiesBackgrounds/img5.jpg');
+    //     background-size: cover;
+    //     background-position: center;
+    // }
     .sortie {
         display: flex;
         height: 100%;
         color: white;
         text-shadow: 1px 1px black;
+        background: url('../img/sortiesBackgrounds/img1.jpg');
+        background-size: cover;
+        background-position: center;
+        transition: box-shadow 0.3s;
         &:hover {
             box-shadow: 1px 1px 15px black;
             cursor: pointer;
@@ -67,6 +71,7 @@
             h1 {
                 margin-bottom: 0.3em;
                 color: #85c1e9;
+                text-shadow: 1px 1px white;
             }
             h2 {
                 margin-bottom: 0.2em;
@@ -79,10 +84,37 @@
                 }
             }
         }
-        .confirmation {
-            text-align: right;
-            text-transform: uppercase;
-            padding: 10px;
+        .rightSide {
+            #btnGrp {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                button {
+                    width: 50%;
+                    margin: auto;
+                    transition: transform 0.2s;
+                    &:hover {
+                        // box-shadow: 1px 1px 5px white;
+                        cursor: pointer;
+                        transform: scale(1.1);
+                    }
+                    border: 1px solid #bdc3c7;
+                }
+                #presentBtn {
+                    background-color: #26de81;
+                }
+                #peutetreBtn {
+                    background-color: #fed330;
+                }
+                #absentBtn {
+                    background-color: #ff3838;
+                }
+            }
+            // .confirmation {
+            //     text-align: right;
+            //     text-transform: uppercase;
+            //     padding: 10px;
+            // }
         }
     }
 }

@@ -21,6 +21,7 @@ class Ajout extends Component {
         try {
             e.preventDefault();
             const itemsRef = firebase.database().ref('sorties');
+            console.log(itemsRef);
             const item = {
                 titre: this.state.titre,
                 date: this.state.date,
